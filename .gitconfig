@@ -1,0 +1,14 @@
+[user]
+	name = troy
+
+[core]
+	editor = nano
+
+[color]
+	ui = true
+
+[push]
+	default = simple
+
+[alias]
+	amend = commit --amend --no-edit
