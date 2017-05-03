@@ -1,14 +1,18 @@
+[pull]
+  rebase = true
+
 [user]
-	name = troy
+  name = troy.schneringer
+  email = troy.schneringer@gmail.com
 
 [core]
-	editor = nano
+  editor = nano
 
 [color]
-	ui = true
+  ui = true
 
 [push]
-	default = simple
+  default = simple
 
 [alias]
-	amend = commit --amend --no-edit
+  amend = commit --amend --no-edit
