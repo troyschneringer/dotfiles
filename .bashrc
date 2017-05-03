@@ -6,7 +6,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export RBENV_ROOT="$HOME/.rbenv"
 
 # Configure GOPATH
-export GOROOT="/usr/local/go"
+export GOROOT="/usr/local/Cellar/go/1.8/libexec"
 export GOPATH="$HOME/Source/go"
 export EDITOR=/usr/bin/vim
 
@@ -133,3 +133,5 @@ fi
 if [[ ! -z $(which rbenv) ]]; then
     eval "$(rbenv init -)"
 fi
+
+export PATH="$HOME/.yarn/bin:$PATH"
