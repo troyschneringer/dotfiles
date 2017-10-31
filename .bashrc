@@ -135,3 +135,4 @@ if [[ ! -z $(which rbenv) ]]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
