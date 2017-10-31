@@ -37,20 +37,29 @@ fi
 
 #export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/bin:$PYENV_ROOT/bin:$RBENV_ROOT/bin"
 
-# Configure Git bash prompt
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWCOLORHINTS=true
-export GIT_PS1_SHOWUPSTREAM=true
-
 git_base_path=""
 if [ ! -z $(which brew) ]; then
     git_base_path="$(brew --prefix git)"
 fi
+bash_completion_path="${git_base_path}/etc/bash_completion.d"
 
-if [ -f "${git_base_path}/etc/bash_completion.d/git-prompt" ]; then
-    source "${git_base_path}/etc/bash_completion.d/git-prompt"
-elif [ -f "${git_base_path}/etc/bash_completion.d/git-prompt.sh" ]; then
-    source "${git_base_path}/etc/bash_completion.d/git-prompt.sh"
+# Configure Git bash prompt
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWUPSTREAM=true
+if [ -f "${bash_completion_path}/git-prompt" ]; then
+    source "${bash_completion_path}/git-prompt"
+elif [ -f "${bash_completion_path}/git-prompt.sh" ]; then
+    source "${bash_completion_path}/git-prompt.sh"
+else
+    echo -e "Warning: Git bash prompt script not found!"
+fi
+
+# Configure Git completion
+if [ -f "${bash_completion_path}/git-completion" ]; then
+    source "${bash_completion_path}/git-completion"
+elif [ -f "${bash_completion_path}/git-completion.bash" ]; then
+    source "${bash_completion_path}/git-completion.bash"
 else
     echo -e "Warning: Git bash completion script not found!"
 fi
