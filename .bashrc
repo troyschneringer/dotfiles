@@ -6,13 +6,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 export RBENV_ROOT="$HOME/.rbenv"
 
 # Configure GOPATH
-export GOROOT="/usr/local/Cellar/go/1.8/libexec"
 export GOPATH="$HOME/Source/go"
 export EDITOR=/usr/bin/vim
-
-if [[ -d "$GOROOT" ]]; then
-    export PATH="$PATH:$GOROOT/bin"
-fi
 
 if [[ -d "$GOPATH" ]]; then
     export PATH="$PATH:$GOPATH/bin"
