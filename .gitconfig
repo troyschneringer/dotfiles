@@ -11,6 +11,9 @@
 [color]
   ui = true
 
+[fetch]
+  prune = true  
+
 [push]
   default = simple
 
