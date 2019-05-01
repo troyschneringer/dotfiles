@@ -59,6 +59,13 @@ else
     echo -e "Warning: Git bash completion script not found!"
 fi
 
+# Configure gcloud prompt
+if [[ -d "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]]; then
+	source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+    source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+fi
+
+
 export FONTAWESOME=0
 if [[ ! -z $(which fc-list) ]]; then
     fc-list | grep fontawesome &>/dev/null
@@ -139,4 +146,4 @@ if [[ ! -z $(which rbenv) ]]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
