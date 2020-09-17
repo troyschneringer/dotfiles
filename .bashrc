@@ -1,37 +1,6 @@
 export CLICOLOR=1
 export TERM=xterm
 
-# Configure PYENV / RBENV
-export PYENV_ROOT="$HOME/.pyenv"
-export RBENV_ROOT="$HOME/.rbenv"
-
-# Configure GOPATH
-export GOPATH="$HOME/Source/go"
-export EDITOR=/usr/bin/vim
-
-if [[ -d "$GOPATH" ]]; then
-    export PATH="$PATH:$GOPATH/bin"
-fi
-
-if [[ -d "$HOME/bin" ]]; then
-    export PATH="$PATH:$HOME/bin"
-fi
-
-if [[ -d "$PYENV_ROOT/bin" ]]; then
-    export PATH="$PATH:$PYENV_ROOT/bin"
-fi
-
-if [[ -d "$RBENV_ROOT/bin" ]]; then
-    export PATH="$PATH:$RBENV_ROOT/bin"
-fi
-
-if [[ -d "$HOME/Library/Android/sdk" ]]; then
-    export ANDROID_HOME="$HOME/Library/Android/sdk"
-    export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-fi
-
-#export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/bin:$PYENV_ROOT/bin:$RBENV_ROOT/bin"
-
 git_base_path=""
 if [ ! -z $(which brew) ]; then
     git_base_path="$(brew --prefix git)"
@@ -137,13 +106,8 @@ set_prompt() {
 export -fn set_prompt
 export PROMPT_COMMAND='set_prompt'
 
-# Enable PYENV / RBENV
-if [[ ! -z $(which pyenv) ]]; then
-    eval "$(pyenv init -)"
-fi
-if [[ ! -z $(which rbenv) ]]; then
-    eval "$(rbenv init -)"
-fi
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
