@@ -1,6 +1,12 @@
 export CLICOLOR=1
 export TERM=xterm
 
+# Configure GOPATH
+export GOPATH="$HOME/Source/go"
+if [[ -d "$GOPATH" ]]; then
+    export PATH="$PATH:$GOPATH/bin"
+fi
+
 git_base_path=""
 if [ ! -z $(which brew) ]; then
     git_base_path="$(brew --prefix git)"
