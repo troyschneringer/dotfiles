@@ -8,7 +8,7 @@ export ZSH="/Users/troyschneringer/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -161,14 +161,14 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export SPACESHIP_PROMPT_ORDER=(line_sep user host dir git exit_code line_sep char)
-export SPACESHIP_CHAR_SYMBOL="\xEF\xAC\xA6"
-export SPACESHIP_CHAR_SUFFIX=" "
-export SPACESHIP_DIR_TRUNC=0
-export SPACESHIP_DIR_TRUNC_REPO=false
-export SPACESHIP_GIT_SYMBOL="\xEF\x90\x98"
-export SPACESHIP_EXIT_CODE_SHOW="true"
-export SPACESHIP_EXIT_CODE_PREFIX="\nwarning: last exit code was"
-export SPACESHIP_EXIT_CODE_SUFFIX="\n"
-export SPACESHIP_EXIT_CODE_SYMBOL=" "
-export SPACESHIP_EXIT_CODE_COLOR="yellow"
+# export SPACESHIP_PROMPT_ORDER=(line_sep user host dir git exit_code line_sep char)
+# export SPACESHIP_CHAR_SYMBOL="\xEF\xAC\xA6"
+# export SPACESHIP_CHAR_SUFFIX=" "
+# export SPACESHIP_DIR_TRUNC=0
+# export SPACESHIP_DIR_TRUNC_REPO=false
+# export SPACESHIP_GIT_SYMBOL="\xEF\x90\x98"
+# export SPACESHIP_EXIT_CODE_SHOW="true"
+# export SPACESHIP_EXIT_CODE_PREFIX="\nwarning: last exit code was"
+# export SPACESHIP_EXIT_CODE_SUFFIX="\n"
+# export SPACESHIP_EXIT_CODE_SYMBOL=" "
+# export SPACESHIP_EXIT_CODE_COLOR="yellow"
