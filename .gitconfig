@@ -15,7 +15,7 @@
   prune = true  
 
 [push]
-  default = simple
+  default = upstream
 
 [alias]
   amend = commit --amend --no-edit
