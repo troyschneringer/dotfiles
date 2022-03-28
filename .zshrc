@@ -172,3 +172,8 @@ fi
 # export SPACESHIP_EXIT_CODE_SUFFIX="\n"
 # export SPACESHIP_EXIT_CODE_SYMBOL=" "
 # export SPACESHIP_EXIT_CODE_COLOR="yellow"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/troyschneringer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/troyschneringer/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/troyschneringer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/troyschneringer/google-cloud-sdk/completion.zsh.inc'; fi
