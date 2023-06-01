@@ -19,3 +19,6 @@
 
 [alias]
   amend = commit --amend --no-edit
+  pr = "!f() { \
+          git checkout -b $1 && git commit --allow-empty -m 'create branch' && gh pr create --draft --title \"$2\" --body '// TODO'; \
+        }; f"
