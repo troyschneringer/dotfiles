@@ -70,6 +70,7 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -105,6 +106,9 @@ fi
 if [[ -d "$HOME/bin" ]]; then
     export PATH="$PATH:$HOME/bin"
 fi
+
+# GO DNS resolution fails on MacOS, this fixes it
+export GODEBUG=netdns=cgo
 
 # if [[ -d "$PYENV_ROOT/bin" ]]; then
 #     export PATH="$PATH:$PYENV_ROOT/bin"
