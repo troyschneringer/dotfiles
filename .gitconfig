@@ -4,6 +4,7 @@
 [user]
   name = troy.schneringer
   email = troy.schneringer@gmail.com
+	signingkey = /Users/troyschneringer/.ssh/id_ed25519_signing.pub
 
 [core]
   editor = nano
@@ -24,3 +25,5 @@
         }; f"
 [branch]
 	autoSetupMerge = simple
+[gpg]
+	format = ssh
